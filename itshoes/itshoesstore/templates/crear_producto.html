@@ -1,0 +1,126 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto - itshoesstore</title>
+    <!-- Enlace a algún archivo CSS externo si lo tienes -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Agregando algo de CSS básico para el formulario -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>itshoesstore</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="{% url 'lista_productos' %}">Productos</a>
+        <a href="{% url 'crear_producto' %}">Crear Producto</a>
+        <a href="{% url 'lista_usuarios' %}">Usuarios</a>
+        <a href="#">Contactanos</a>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Crear Producto</h1>
+
+        <!-- Formulario para crear producto -->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Muestra los campos del formulario como párrafos -->
+            <button type="submit">Guardar Producto</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 itshoesstore. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
