@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Sports</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="#sobre-mi">Quienes somos</a></li>
+                <li><a href="#galeria-productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <img src="{% static 'images/slider/portada.jpg' %}" alt="Portada 1" class="slide">
+            <img src="{% static 'images/slider/portada2.jpg' %}" alt="Portada 2" class="slide">
+            <img src="{% static 'images/slider/portada3.jpg' %}" alt="Portada 1" class="slide">
+            <img src="{% static 'images/slider/portada4.jpg' %}" alt="Portada 1" class="slide">
+            
+
+            <!-- Otros slides -->
+        </div>
+    </div>
+
+    <script src="{% static 'js/slider.js' %}"></script>
+
+    <!-- Sección principal -->
+    <section id="inicio">
+        <h1>IT Sports</h1>
+        <p>Esta es mi primera página web usando HTML y CSS. Aquí puedes ver nuestros productos y contactarnos.</p>
+    </section>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi">
+        <h2>Quienes Somos</h2>
+        <p>Somos apasionados por el depoasdakjnajksdnjksandjaknsdkjansdjknaskjdnakjnsdkjasndkjandjkansdjkandjkasndjkasndjasndarte...</p>
+    </section>
+
+    <h2>Nuestros Productos</h2>
+    <div class="galeria">
+        <div class="productos">
+            <img src="{% static 'images/producto1.jpg' %}" alt="Producto1">
+            <h3>Calzado casual juvenil</h3>
+            <p>Calzado casual unisex </p>
+            <a href="{% static 'images/producto2.jpg' %}">COMPRAR</a>
+        </div>
+        <div class="productos">
+            <img src="{% static 'images/producto3.jpg' %}" alt="Producto2">
+            <h3>Calzado deportivo azul</h3>
+            <p>Calzado deportivo atletismo unisex </p>
+            <a href="producto_ver.html?id_producto=4">COMPRAR</a>
+        </div>
+        <div class="productos">
+            <img src="{% static 'images/producto5.jpg' %}" alt="Producto3">
+            <h3>Calzado atletismo </h3>
+            <p>Descripción </p>
+            <a href="comprar-producto.html?id_producto=3">COMPRAR</a>
+        </div>
+        <div class="productos">
+            <img src="assets/images/producto4.jpg" alt="Producto3">
+            <h3>Running basic's unisex</h3>
+            <p>Descripción </p>
+            <a href="comprar-producto.html?id_producto=4">COMPRAR</a>
+        </div>
+        <div class="productos">
+            <img src="assets/images/producto5.jpg" alt="Producto3">
+            <h3>Sport Premium Shoes</h3>
+            <p>Descripción </p>
+            <a href="comprar-producto.html?id_producto=5">COMPRAR</a>
+        </div>
+        <div class="productos">
+            <img src="assets/images/producto6.jpg" alt="Producto6">
+            <h3>Aerodynamic sport shoes</h3>
+            <p>Descripción </p>
+            <a href="comprar-producto.html?id_producto=6">COMPRAR</a>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

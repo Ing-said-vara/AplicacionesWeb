@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comprar producto</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+   
+
+    <!-- Barra de navegación -->
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Quienes somos</a></li>
+                <li><a href="#galeria-productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <img src="assets/images/slider/portada.jpg" alt="Portada 1" class="slide">
+            <img src="assets/images/slider/portada2.jpg" alt="Portada 2" class="slide">
+            <img src="assets/images/slider/portada3.jpg" alt="Portada 3" class="slide">
+            <img src="assets/images/slider/portada4.jpg" alt="Portada 3" class="slide">
+        </div>
+    </div>
+
+    <script src="assets/scripts/slider.js"></script>
+
+
+
+
+
+<h1> Comprar producto</h1>
+<div class="vista_producto">
+    <img id="img_pto" src="assets/images/producto1.jpg" alt="producto1" onclick="openModal(this)">
+    <div>
+        <h2 id="nombre_producto">ZAPATO</h2>
+        <p id="descripcion_pto">Descripción de producto</p>
+        <h2 id="precio_pto">$1,299.00</h2>
+        <p>Cantidad:</p>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="100" value="1">
+    </div>
+</div>
+
+<!-- Modal para imagen ampliada -->
+<div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+<!-- Script para ejecutar el  modal -->
+<script src="assets/scripts/abrir_modal.js"></script>
+
+<h2>Datos de envío</h2>
+<form action="#" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="name">Cantidad:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="name">Direccion:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    
+    <input type="submit" value="Comprar">
+</form>
+    </body>
+    <!-- EJECUTAR AQUI ES EL SCRIPT DE VER PRODUCTOS-->
+    <script src="assets/scripts/productos_ver.js"></script> 
+    </html>
